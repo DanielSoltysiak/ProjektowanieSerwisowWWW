@@ -1,7 +1,7 @@
-.klasa {
-    color: blue;
-  }
-  
-  p {
-    color: red;
-  }
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  padding: 1px;
+  text-align: center;
+}
