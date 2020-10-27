@@ -6,20 +6,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/main.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+    <script type="text/javascript" src="main.js"></script>
 </head>
-<body>
-    <div class="container">
+<body onload="counting();">
+    <img src="tlo.jpg" height="300px" width="100%">
+    <div class="container pt-2">
         <div class="row">
             <div class="pb-2 col-12 col-md-3 order-md-2">
                 <ul class="list-group sticky-top">
+                    <li class="list-group-item"><a href="index.html">Strona główna</a></li>
                     <li class="list-group-item"><a href="list.html">List</a></li>
                     <li class="list-group-item"><a href="podrecznik.html">Podręcznik</a></li>
                     <li class="list-group-item"><a href="formularz.html">Formularz</a></li>
                 </ul>
             </div>
             <div class="pb-2 col-12 col-md-9 order-md-1">
-
+                <div class="card mb-2" id="clock"></div>
+                <div class="card">
+                    <h2 class="card-title">Strona główna</h2>
+                    <h4>O autorze</h4>
+                    <p>Nazywam się Daniel Sołtysiak, jestem studentem III roku informatyki na Akademii Marynarki Wojennej. Moja grupa laboratoryjna to 185IC_B2, a nr albumu to 21672</p>
+                    <h4>Użyte technologie</h4>
+                    <p>Do wykonania tej strony internetowej skorzystałem z HTMLa, CSSa, JavaSriptu oraz biblioteki front-endowej - Bootstrap</p>
+                </div>
             </div>
         </div>
     </div>
