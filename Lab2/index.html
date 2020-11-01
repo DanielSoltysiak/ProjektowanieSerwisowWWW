@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/main.css">
+    <script type="text/javascript" src="./assets/main.js"></script>
+</head>
+<body onload="counting();">
+    <div class="container pt-2">
+        <div class="row">
+            <div class="pb-2 col-12 col-md-3 order-md-2">
+                <ul class="list-group sticky-top">
+                    <li class="list-group-item">Home</li>
+                </ul>
+            </div>
+        </div>
+        <div class="pb-2 col-12 col-md-9 order-md-1">
+            <div class="card mb-2" id="clock"></div>
+            <div class="card" id="ankietaOwoce">
+                <h2 class="card-title">Ankieta</h2>
+                <p>Jaki jest Twój ulubiony owoc?</p>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioJablko" value="Jabłko">
+                    <label class="form-check-label" for="radioJablko">Jabłko</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioPomarancza" value="Pomarańcza">
+                    <label class="form-check-label" for="radioPomarancza">Pomarańcza</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioBanan" value="Banan">
+                    <label class="form-check-label" for="radioBanan">Banan</label>
+                </div>
+                <button onclick="displayRadioValue()" class="btn btn-primary col-2 ml-3">Zatwierdź</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
