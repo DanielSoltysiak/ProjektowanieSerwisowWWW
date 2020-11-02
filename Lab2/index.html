@@ -8,34 +8,51 @@
     <link rel="stylesheet" href="./assets/main.css">
     <script type="text/javascript" src="./assets/main.js"></script>
 </head>
-<body onload="counting();">
+<body class="dayMode" onload="counting(); chceckingTime();">
+    <div class="custom-control custom-switch sticky-top">
+        <input type="checkbox" class="custom-control-input" id="lightSwitch" onclick="turningLight();">
+        <label class="custom-control-label" for="lightSwitch" id="lightSwitchLabel">Włącz tryb nocny</label>
+    </div>
+    <img src="./images/technology.jpg" alt="Background" height="300px" width="100%" style="position: relative; z-index: 1;">
     <div class="container pt-2">
         <div class="row">
             <div class="pb-2 col-12 col-md-3 order-md-2">
                 <ul class="list-group sticky-top">
-                    <li class="list-group-item">Home</li>
+                    <li class="list-group-item list-group-item-action"><a href="#clock">Zegar</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#ankietaOwoce">Owocowa ankieta</a></li>
                 </ul>
             </div>
-        </div>
-        <div class="pb-2 col-12 col-md-9 order-md-1">
-            <div class="card mb-2" id="clock"></div>
-            <div class="card" id="ankietaOwoce">
-                <h2 class="card-title">Ankieta</h2>
-                <p>Jaki jest Twój ulubiony owoc?</p>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioJablko" value="Jabłko">
-                    <label class="form-check-label" for="radioJablko">Jabłko</label>
+            <div class="pb-2 col-12 col-md-9 order-md-1">
+                <div class="card mb-2" id="clock"></div>
+                <div class="card mb-2" id="ankietaOwoce">
+                    <h2 class="card-title">Ankieta</h2>
+                    <p>Jaki jest Twój ulubiony owoc?</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioJablko" value="Jabłko">
+                        <label class="form-check-label" for="radioJablko">Jabłko</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioPomarancza" value="Pomarańcza">
+                        <label class="form-check-label" for="radioPomarancza">Pomarańcza</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioBanan" value="Banan">
+                        <label class="form-check-label" for="radioBanan">Banan</label>
+                    </div>
+                    <button onclick="displayRadioValue()" class="btn btn-primary col-2 ml-3">Zatwierdź</button>
+                    <div id="result"></div>
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioPomarancza" value="Pomarańcza">
-                    <label class="form-check-label" for="radioPomarancza">Pomarańcza</label>
+                <div class="card mb-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus non orci at ligula tristique sagittis. Donec condimentum vitae diam nec sodales. Vivamus tortor dui, euismod eu pulvinar eu, maximus non tellus. Nullam accumsan tellus id magna ullamcorper, nec laoreet enim venenatis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse sit amet maximus nisl. Mauris vitae porttitor magna, at laoreet purus. Aliquam at dui tortor.
+
+Aliquam fermentum facilisis lectus, ac aliquam lorem tristique at. Etiam volutpat est vitae diam blandit, sit amet rutrum dolor aliquet. Fusce eleifend nisi eget finibus elementum. Fusce bibendum ipsum metus, non viverra est finibus nec. Aenean dictum ipsum et leo malesuada tempus. Nunc accumsan mauris at nisl semper pretium at non magna. Quisque lobortis hendrerit ultrices. Phasellus libero odio, bibendum nec imperdiet ac, feugiat eu diam. Cras ut magna suscipit, convallis massa nec, hendrerit est. Praesent sed iaculis turpis. Sed commodo pellentesque egestas. Duis scelerisque tortor in ipsum fringilla tempor tristique at ipsum.
+
+Curabitur sem tellus, dignissim id sem a, pretium fermentum ante. Maecenas eu faucibus purus. Suspendisse eu nunc in tortor tincidunt semper eu nec ex. Vestibulum et varius orci. Integer bibendum volutpat diam eget laoreet. Suspendisse id lacus sed elit convallis euismod. Donec consectetur turpis id lorem tincidunt maximus. Quisque lorem elit, accumsan eu sem et, fringilla sollicitudin nunc. Cras condimentum fringilla varius. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam sit amet tristique lorem. Sed finibus augue vitae sapien euismod aliquam at in tortor. Maecenas maximus ex nec urna bibendum, quis viverra sem egestas. Phasellus aliquam vehicula fermentum. Ut a metus dapibus, luctus sem sed, molestie massa. Suspendisse bibendum augue eget porttitor aliquam.
+
+Cras hendrerit sapien in laoreet dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris in aliquet magna, ut egestas lorem. Nam ex erat, fringilla non mattis in, congue quis lectus. Vivamus hendrerit venenatis lorem, ac accumsan tortor condimentum id. Morbi iaculis malesuada lectus a pellentesque. Proin quis enim ante. Donec commodo ipsum ligula, in vulputate nulla lobortis ut.
+
+Duis lacinia scelerisque sem, ut vehicula velit ultricies ac. Morbi non vulputate odio, ut aliquet felis. Ut ultrices lectus a arcu pellentesque, sit amet eleifend tellus tempor. In massa massa, cursus eu enim eget, sodales porta dolor. Nunc vel mi vitae massa ultricies auctor at quis risus. Sed lobortis lobortis eros sit amet posuere. Praesent mollis aliquam tincidunt. Ut vulputate luctus velit, in sollicitudin dui consequat non. Donec imperdiet pretium ipsum, quis lacinia nisi maximus in. Cras molestie ac eros sed ultricies. Aenean ut tortor viverra, dictum mi eget, vestibulum erat. Phasellus accumsan volutpat lorem non cursus. Vivamus a molestie lorem. Suspendisse facilisis quam a diam gravida blandit.
                 </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="radio" name="ankietaOwoce" id="radioBanan" value="Banan">
-                    <label class="form-check-label" for="radioBanan">Banan</label>
-                </div>
-                <button onclick="displayRadioValue()" class="btn btn-primary col-2 ml-3">Zatwierdź</button>
-                <div id="result"></div>
             </div>
         </div>
     </div>

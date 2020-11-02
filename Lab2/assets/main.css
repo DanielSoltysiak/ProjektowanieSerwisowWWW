@@ -1,5 +1,13 @@
+.nightMode{
+    background-color: #333333;
+    color: white;
+}
 #clock{
     text-align: center;
     font-size: xx-large;
     font-weight: bold;
+}
+#lightSwitch{
+    z-index: 2;
+    position: relative;
 }
