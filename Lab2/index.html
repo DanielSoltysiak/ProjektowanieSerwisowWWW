@@ -8,12 +8,12 @@
     <link rel="stylesheet" href="./assets/main.css">
     <script type="text/javascript" src="./assets/main.js"></script>
 </head>
-<body class="dayMode" onload="counting(); chceckingTime();">
-    <div class="custom-control custom-switch sticky-top">
+<body class="dayMode" onload="counting(); chceckingTime(); turningLight()">
+    <img src="./images/technology.jpg" alt="Background" height="300px" width="100%" style="z-index: 1;">
+    <div class="custom-control custom-switch sticky-top" id="lightSwitchContainer">
         <input type="checkbox" class="custom-control-input" id="lightSwitch" onclick="turningLight();">
         <label class="custom-control-label" for="lightSwitch" id="lightSwitchLabel">Włącz tryb nocny</label>
     </div>
-    <img src="./images/technology.jpg" alt="Background" height="300px" width="100%" style="position: relative; z-index: 1;">
     <div class="container pt-2">
         <div class="row">
             <div class="pb-2 col-12 col-md-3 order-md-2">
