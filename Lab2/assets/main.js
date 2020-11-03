@@ -41,7 +41,7 @@ function counting(){
     var hour =clockCheck(today.getHours());
     var minute = clockCheck(today.getMinutes());
     var second = clockCheck(today.getSeconds());
-    document.getElementById("clock").innerHTML = day+'/'+month+'/'+year+' | '+hour+':'+minute+':'+second;
+    document.getElementById("cardClock").innerHTML = day+'/'+month+'/'+year+' | '+hour+':'+minute+':'+second;
     setTimeout("counting()",1000);
 }
 function displayRadioValue(){
@@ -50,4 +50,13 @@ function displayRadioValue(){
         if(ele[i].checked)
         document.getElementById("result").innerHTML = "Dziękujemy za udział w ankiecie.<br>Twój ulubiony owoc to: "+ele[i].value;
     }
+}
+function changePhoto(){
+    document.getElementById("backgroundPhoto").src = "./images/ufo.jpg";
+}
+var clicks =0;
+document.getElementById("cardClicks").addEventListener("click", addOne);
+function addOne(){
+    clicks = ++clicks;
+    document.getElementById("cardClicks").innerHTML = clicks;
 }

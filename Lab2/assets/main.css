@@ -2,7 +2,10 @@
     background-color: #333333;
     color: white;
 }
-#clock{
+.backgroundPhoto{
+    z-index: 1;
+}
+#cardClock{
     text-align: center;
     font-size: xx-large;
     font-weight: bold;
