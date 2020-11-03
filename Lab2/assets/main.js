@@ -54,9 +54,3 @@ function displayRadioValue(){
 function changePhoto(){
     document.getElementById("backgroundPhoto").src = "./images/ufo.jpg";
 }
-var clicks =0;
-document.getElementById("cardClicks").addEventListener("click", addOne);
-function addOne(){
-    clicks = ++clicks;
-    document.getElementById("cardClicks").innerHTML = clicks;
-}
