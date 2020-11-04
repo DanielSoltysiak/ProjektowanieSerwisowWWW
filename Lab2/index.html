@@ -19,6 +19,7 @@
             <div class="pb-2 col-12 col-md-3 order-md-2">
                 <ul class="list-group sticky-top">
                     <li class="list-group-item list-group-item-action"><a href="#cardClock">Zegar</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardHelloWorld">Hello World!</a></li>
                     <li class="list-group-item list-group-item-action"><a href="#cardAnkietaOwoce">Owocowa ankieta</a></li>
                     <li class="list-group-item list-group-item-action"><a href="#cardZmianaZdjecia">Zmiana zdjęcia</a></li>
                     <li class="list-group-item list-group-item-action">
@@ -26,13 +27,29 @@
                         <span class="badge badge-primary badge-pill" id="counterClicks">0</span>
                     </li>
                     <li class="list-group-item list-group-item-action">
-                        <a href="#cardMouseOvers">Licznik kliknięć</a>
+                        <a href="#cardMouseOvers">Licznik najechań</a>
                         <span class="badge badge-primary badge-pill" id="counterMouseOvers">0</span>
                     </li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardColorChange">Zmiana kolorów</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardHide">Ukrywanie</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardSticky">Widoczny zegar</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardCat">Śmieszny kot</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardMenuLeft">Menu po lewej</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardTextColor">Kolor tekstu</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardFont">Font</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardButton">Żółte przyciski</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardOnTop">Kafelek wyżej</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardbattle">Bitwa pod Grunwaldem</a></li>
+                    <li class="list-group-item list-group-item-action"><a href="#cardRandom">Losuj liczbę</a></li>
                 </ul>
             </div>
             <div class="pb-2 col-12 col-md-9 order-md-1">
                 <div class="card mb-2" id="cardClock"></div>
+                <div class="card mb-2" id="cardHelloWorld">
+                    <h2 class="card-title">Hello World</h2>
+                    <p>Po naciśnięciu guzika wyświetli się klasyczne przywitanie</p>
+                    <button onclick="helloWorld()" class="btn btn-primary col-2 ml-3">Hello!</button>
+                </div>
                 <div class="card mb-2" id="cardAnkietaOwoce">
                     <h2 class="card-title">Ankieta</h2>
                     <p>Jaki jest Twój ulubiony owoc?</p>
@@ -64,9 +81,86 @@
                     <h2 class="card-title">Licznik najechań</h2>
                     <p>Za każdym razem jak najedziez na ten kafelek, licznik po prawej się zwiększy</p>
                 </div>
+                <div class="card mb-2" id="cardColorChange">
+                    <h2 class="card-title">Zmiana kolorów</h2>
+                    <p>Wybierz kolor</p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorRadio" id="radioRed" value="red">
+                        <label class="form-check-label" for="radioRed">Czerwony</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorRadio" id="radioGreen" value="green">
+                        <label class="form-check-label" for="radioGreen">Zielony</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="colorRadio" id="radioBlue" value="blue">
+                        <label class="form-check-label" for="radioBlue">Niebieski</label>
+                    </div>
+                    <div id="colorBlock" style="background-color: white; height: 100px;"></div>
+                    <button onclick="colorChange()" class="btn btn-primary col-2 ml-3">Zatwierdź</button>
+                </div>
+                <div class="card mb-2" id="cardHide">
+                    <h2 class="card-title">Ukrywanie</h2>
+                    <p>Naciśnj przycisk aby ukryć kafelek "Hello World!"</p>
+                    <button onclick="hide()" class="btn btn-primary col-2 ml-3">Ukryj</button>
+                </div>
+                <div class="card mb-2" id="cardSticky">
+                    <h2 class="card-title">Widoczny zegar</h2>
+                    <p>Naciśnj przycisk jeśli chcesz żeby zegar był widoczny podczas scrollowania strony</p>
+                    <button onclick="stickyClock()" class="btn btn-primary col-2 ml-3">Klik</button>
+                </div>
+                <div class="card mb-2" id="cardCat">
+                    <h2 class="card-title">Śmieszny kot</h2>
+                    <p>Naciśnij przycisk aby wyświetlić zdjęcie śmiesznego kota</p>
+                    <button onclick="funnyCat()" class="btn btn-primary col-2 ml-3">Klik</button>
+                </div>
+                <div class="card mb-2" id="cardMenuLeft">
+                    <h2 class="card-title">Menu po lewej</h2>
+                    <p>Ten przycisk przeniesie menu z prawej strony na lewą</p>
+                    <button onclick="menuLeft()" class="btn btn-primary col-2 ml-3">Klik</button>
+                </div>
+                <div class="card mb-2" id="cardTextColor">
+                    <h2 class="card-title">Kolor tekstu</h2>
+                    <label for="colorInput">Wybierz kolor tekstu</label>
+                    <input type="color" class="form-control" id="colorInput">
+                    <button onclick="textColor()" class="btn btn-primary col-2 ml-3">Klik</button>
+                </div>
+                <div class="card mb-2" id="cardFont">
+                    <h2 class="card-title">Font</h2>
+                    <p>Ten przycisk zmieni styl fontu na italic</p>
+                    <button onclick="italic()" class="btn btn-primary col-2 ml-3">Italic</button>
+                </div>
+                <div class="card mb-2" id="cardButton">
+                    <h2 class="card-title">Żółte przyciski</h2>
+                    <p>Ten przycisk zmieni kolor przycisków na żółty</p>
+                    <button onclick="warningButton()" class="btn btn-primary col-2 ml-3">Zmień</button>
+                </div>
+                <div class="card mb-2" id="cardPutOnTop">
+                    <h2 class="card-title">Kafelek wyżej</h2>
+                    <p>Po naciśnięcu przycisku cały kafelek pojawi się na kafelku powyżej</p>
+                    <button onclick="putOnTop()" class="btn btn-primary col-2 ml-3">Klik</button>
+                </div>
+                <div class="card mb-2" id="cardBattle">
+                    <h2 class="card-title">Bitwa pod Grunwaldem</h2>
+                    <p>Naciśnij przycisk żeby dowiedzieć się ile lat minęło od Bitwy pod Grunwaldem</p>
+                    <button onclick="battle()" class="btn btn-primary col-2 ml-3">Klik</button>
+                    <div id="battleResult"></div>
+                </div>
+                <div class="card mb-2" id="cardRandom">
+                    <h2 class="card-title">Losuj liczbę</h2>
+                    <p>Po naciśnięciu guzika wyświetli się losowa liczba od 0 do 10</p>
+                    <button onclick="drawNumber()" class="btn btn-primary col-2 ml-3">Losuj</button>
+                </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="./assets/couters.js"></script>
+    <script>
+        function funnyCat(){
+            var cat_img = document.createElement("img");
+            cat_img.src = "./images/cat.jpg"
+            document.getElementById("cardCat").appendChild(cat_img);
+        }
+    </script>
 </body>
 </html>

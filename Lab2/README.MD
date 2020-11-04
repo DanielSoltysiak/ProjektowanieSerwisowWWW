@@ -1,0 +1,1 @@
+Zadanie polegało na wykorzystaniu JavaScriptu do edycji elementów strony.
