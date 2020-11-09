@@ -9,7 +9,40 @@
     <script type="text/javascript" src="./assets/main.js"></script>
     <script type="text/javascript" src="./assets/zadania.js"></script>
 </head>
-<body>
-    
+<body onload="addListeners()">
+    <img src="./images/eye.jpg" alt="Background-eye" height="300px" width="100%">
+    <div class="container pt-2">
+        <div class="row">
+            <div class="pb-2 col-12 col-md-3 order-md-2">
+                <ul class="list-group sticky-top">
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#cardClicks">Licznik kliknięć</a>
+                        <span class="badge badge-primary badge-pill" id="counterClicks">0</span>
+                    </li>
+                    <li class="list-group-item list-group-item-action">
+                        <a href="#cardMouseOvers">Licznik najechań</a>
+                        <span class="badge badge-primary badge-pill" id="counterMouseOvers">0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pb-2 col-12 col-md-9 order-md-1">
+                <div class="card mb-2" id="cardClicks">
+                    <h2 class="card-title">Licznik kliknięć</h2>
+                    <p>Za każdym razem jak naciśniesz ten kafelek, licznik po prawej się zwiększy</p>
+                </div>
+                <div class="card mb-2" id="cardMouseOvers">
+                    <h2 class="card-title">Licznik najechań</h2>
+                    <p>Za każdym razem jak najedziez na ten kafelek, licznik po prawej się zwiększy</p>
+                </div>
+                <div class="card mb-2" id="cardD">
+                    <h2 class="card-title">Przyciśnij i puść klawisz</h2>
+                    <p>Po przyciśnięci klawisza zmieni się kolor tła strony, po puszczeniu klawisza kolor strony zmieni się ponownie.</p>
+                    <p>Możesz przywrócić początkowy kolor tła po naciśnięciu jeszcze raz.</p>
+                    <p>Można korzystać z tej funkcjonalności wiele razy :)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./assets/counters.js"></script>
 </body>
 </html>
