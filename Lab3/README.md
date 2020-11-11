@@ -9,3 +9,11 @@ Pierwszą częścią laborki, było wykonanie 9 prostych zadań. Wszystkie funkc
 ![Zadnie 7](./screenshots/zad7.png)
 ![Zadnie 8](./screenshots/zad8.png)
 ![Zadnie 9](./screenshots/zad9.png)
+
+Drugą częścią zadania było stworzenie strony wykorzystującej 10 eventListenerów
+
+![Strona po załadowaniu,"keydown"](./sreenshots/strona.png "Strona po załadowaniu")
+!["drag","click","mouseover"](./screenshots//liczniki.png "Działanie liczników i przeciągnięcia obrazu")
+![Wciśnięcie klawisza,"keypress"](./screenshots/wcisniecie.png "Strona po wciśnięciu dowolnego klawisza")
+![Puszczenie klawisza,"keyup"](./screenshots/puszczenie.png "Strona po puszczeniu wciśniętego klawisza")
+!["wheel","change","copy","input"](./screenshots/reszta.png "Działanie scrolla, formularzy i kopiowania")
