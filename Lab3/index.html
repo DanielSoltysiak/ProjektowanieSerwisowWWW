@@ -9,40 +9,78 @@
     <script type="text/javascript" src="./assets/main.js"></script>
     <script type="text/javascript" src="./assets/zadania.js"></script>
 </head>
-<body onload="addListeners()">
-    <img src="./images/eye.jpg" alt="Background-eye" height="300px" width="100%">
+<body onload="addColorListeners(),classesAdd()">
+    <img src="./images/eye.jpg" alt="Background-eye" height="300px" width="100%" id="backgroundPhoto">
     <div class="container pt-2">
         <div class="row">
             <div class="pb-2 col-12 col-md-3 order-md-2">
                 <ul class="list-group sticky-top">
-                    <li class="list-group-item list-group-item-action">
+                    <li class="list-group-item"><a href="#cardDrag">Przeciągnij</a></li>
+                    <li class="list-group-item">
                         <a href="#cardClicks">Licznik kliknięć</a>
                         <span class="badge badge-primary badge-pill" id="counterClicks">0</span>
                     </li>
-                    <li class="list-group-item list-group-item-action">
+                    <li class="list-group-item">
                         <a href="#cardMouseOvers">Licznik najechań</a>
                         <span class="badge badge-primary badge-pill" id="counterMouseOvers">0</span>
                     </li>
+                    <li class="list-group-item"><a href="#cardKeys">Przyciśnij i puść klawisz</a></li>
+                    <li class="list-group-item"><a href="#cardScroll">Scrollowanie strony</a></li>
+                    <li class="list-group-item"><a href="#cardSelect">Owocowa ankieta</a></li>
+                    <li class="list-group-item"><a href="#cardCopy">Kopia</a></li>
+                    <li class="list-group-item"><a href="#cardInput">Input</a></li>
                 </ul>
             </div>
             <div class="pb-2 col-12 col-md-9 order-md-1">
-                <div class="card mb-2" id="cardClicks">
-                    <h2 class="card-title">Licznik kliknięć</h2>
+                <div class="card" id="cardDrag">
+                    <h2>Przeciąganie</h2>
+                    <p>Jeśli przeciągniesz zdjęcie wyskoczy komunikat</p>
+                </div>
+                <div class="card" id="cardClicks">
+                    <h2>Licznik kliknięć</h2>
                     <p>Za każdym razem jak naciśniesz ten kafelek, licznik po prawej się zwiększy</p>
                 </div>
-                <div class="card mb-2" id="cardMouseOvers">
-                    <h2 class="card-title">Licznik najechań</h2>
+                <div class="card" id="cardMouseOvers">
+                    <h2>Licznik najechań</h2>
                     <p>Za każdym razem jak najedziez na ten kafelek, licznik po prawej się zwiększy</p>
                 </div>
-                <div class="card mb-2" id="cardD">
-                    <h2 class="card-title">Przyciśnij i puść klawisz</h2>
+                <div class="card" id="cardKeys">
+                    <h2>Przyciśnij i puść klawisz</h2>
                     <p>Po przyciśnięci klawisza zmieni się kolor tła strony, po puszczeniu klawisza kolor strony zmieni się ponownie.</p>
                     <p>Możesz przywrócić początkowy kolor tła po naciśnięciu jeszcze raz.</p>
-                    <p>Można korzystać z tej funkcjonalności wiele razy :)</p>
+                </div>
+                <div class="card" id="cardScroll">
+                    <h2>Scrollowanie strony</h2>
+                    <p>Jeżeli użyjesz scrolla to kolor tekstu zmieni się na niebiesko</p>
+                </div>
+                <div class="card" id="cardSelect">
+                    <h2>Wybór</h2>
+                    <p>Wybierz swój ulubiony owoc</p>
+                    <select class="form-control col-3" id="fruitSelect">
+                        <option value="Jabłko">Jabłko</option>
+                        <option value="Pomarańcza">Pomarańcza</option>
+                        <option value="Banan">Banan</option>
+                    </select>
+                    <p id="fruitSelectOutput"></p>
+                </div>
+                <div class="card" id="cardCopy">
+                    <h2>Kopia</h2>
+                    <p id="copyWarning">Jeśli skopiujesz tekst pojawi się ostrzeżenie</p>
+                </div>
+                <div class="card" id="cardInput">
+                    <h2>input</h2>
+                    <p>Napisz coś</p>
+                    <input type="text" class="col-3" id="textInput">
+                    <p id="textOutput"></p>
                 </div>
             </div>
         </div>
     </div>
     <script type="text/javascript" src="./assets/counters.js"></script>
+    <script>
+        document.getElementById("backgroundPhoto").addEventListener("drag",dragPhotoEvent);
+        document.getElementById("fruitSelect").addEventListener("change",selectChange);
+        document.getElementById("textInput").addEventListener("input",inputEvent)
+    </script>
 </body>
 </html>

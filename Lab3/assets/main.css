@@ -1,0 +1,9 @@
+.warning{
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    position: fixed;
+    top: 100px;
+    left: 350px;
+    color: red;
+}
