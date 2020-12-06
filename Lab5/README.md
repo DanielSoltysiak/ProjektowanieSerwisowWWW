@@ -1,0 +1,2 @@
+<p>Celem laboratorium było zapoznanie się z pobieraniem obiektów JSON lokalnie oraz przez API</p>
+<p>Aby wydobyć informacje z obiektu lokalnego korzystałem z funkcji fetch i serwera [Simple Server](https://www.npmjs.com/package/simple-server)</p>
