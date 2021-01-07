@@ -67,22 +67,26 @@ export default function calculate(obj, buttonName) {
     return {};
   }
 
+  // Dodana przeze mnie funkcja odpowiedzialna za logarytm naturalny
+  // Działanie tej funkcji jest zbliżone do funkcji wywoływanej jeśli buttonName jest równy "%"
+
+  // Jeśli obj.operation i obj.next nie są null to wykonywana jest na nich operacja
+  // Następnie zwracany jest total równy logarytmowi naturalnemu z wyniku operate
+  // Ln jest obliczany za pomocą funkcji Math.log
+
+  // Jeśli obj.operation jest null to zwracany jest next równy logarytmowi z obj.next
   if (buttonName === "ln") {
     if (obj.operation && obj.next) {
       const result = operate(obj.total, obj.next, obj.operation);
       return {
-        total: Big(Math.log(result))
-          .div(Big("1"))
-          .toString(),
+        total: Math.log(result).toString(),
         next: null,
         operation: null,
       }
     }
     if (obj.next) {
       return {
-        next: Big(Math.log(obj.next))
-          .div(Big("1"))
-          .toString(),
+        next: Math.log(obj.next).toString(),
       }
     }
   }

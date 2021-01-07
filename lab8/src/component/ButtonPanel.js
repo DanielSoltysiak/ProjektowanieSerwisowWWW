@@ -1,9 +1,11 @@
+// Import pakietów
 import Button from "./Button";
 import React from "react";
 import PropTypes from "prop-types";
 
 import "./ButtonPanel.css";
 
+// Eksportowana klasa
 export default class ButtonPanel extends React.Component {
   static propTypes = {
     clickHandler: PropTypes.func,
@@ -12,7 +14,10 @@ export default class ButtonPanel extends React.Component {
   handleClick = buttonName => {
     this.props.clickHandler(buttonName);
   };
-// 
+
+// Klasa zwraca klawiaturę kalkulatora
+// W ostatnim divie dodałem przycisk "ln" dodałem do niego klasę orange
+// Z przycisku 0 usunąłem klasę wide
   render() {
     return (
       <div className="component-button-panel">
