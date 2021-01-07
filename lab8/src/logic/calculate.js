@@ -67,6 +67,26 @@ export default function calculate(obj, buttonName) {
     return {};
   }
 
+  if (buttonName === "ln") {
+    if (obj.operation && obj.next) {
+      const result = operate(obj.total, obj.next, obj.operation);
+      return {
+        total: Big(Math.log(result))
+          .div(Big("1"))
+          .toString(),
+        next: null,
+        operation: null,
+      }
+    }
+    if (obj.next) {
+      return {
+        next: Big(Math.log(obj.next))
+          .div(Big("1"))
+          .toString(),
+      }
+    }
+  }
+
   if (buttonName === ".") {
     if (obj.next) {
       // ignore a . if the next number already has one
